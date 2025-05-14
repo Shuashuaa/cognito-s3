@@ -32,9 +32,7 @@ to use `temporary AWS credentials` 'cognito identity pool', Use the direct AWS S
 npm install @aws-sdk/credential-provider-cognito-identity
 ```
 
-===========================================================================================
-Give a `temporary AWS credentials` temporary access (without implementing registration)
-===========================================================================================
+### `Give a **temporary AWS credentials** temporary access (without implementing registration)`
 
 3. congnito identity pool (sample_IAM_role, apply the `@aws-sdk/credential-provider-cognito-identity`)
 
@@ -60,7 +58,7 @@ const s3Client = new S3Client({
 
 4. Upon refresh check the identity pool if your unauthenticated access is listed by aws.
 
-5.Set the bucket's policy CORS for the system's URL
+5. Set the bucket's policy CORS for the system's URL
 
 Cross-origin resource sharing (CORS)
 ```
@@ -142,7 +140,7 @@ policy editor
 *reference to the BucketList Code*
 <a href="#" />
 
-	2. get the Objects-images using the IAM policy role (GetObject)
+2. get the Objects-images using the IAM policy role (GetObject)
 
 ```
 {
@@ -174,7 +172,7 @@ policy editor
 }
 ```
 
-8. after setting the permission for s3:GetObject in IAM Policy. Now we will implement the authenticated client for the GET request to Access the Object URL using Pre-Signed URLs.
+8. Since direct Object URLs are blocked because public access is off, we've added the `s3:GetObject` permission to the IAM policy. Now, we will use our `authenticated client` to access the objects by implementing `pre-signed URLs` for the GET requests.
 ```
 install --
 npm install @aws-sdk/s3-request-presigner
