@@ -18,7 +18,7 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
 // --- AWS Configuration ---
 // Replace with your actual Cognito Identity Pool ID and Region
-const IDENTITY_POOL_ID = "ap-southeast-1:cba70990-6a46-4e51-9224-7cd045a73c0a";
+const IDENTITY_POOL_ID = "YOUR-IDENTITY-POOL-ID";
 const COGNITO_REGION = "ap-southeast-1"; // Region where your Identity Pool is located
 
 // Replace with your S3 bucket name and its Region
